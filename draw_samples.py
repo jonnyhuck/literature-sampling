@@ -15,7 +15,7 @@ for d in datasets:
     # open data files
     df = read_excel(d['filename'])
 
-    # calculate sample size (23%)
+    # calculate sample size (20% + extras)
     sample_size = int(round(d['n'] * 0.2)) + d['extra']
 
     # extract random sample (set seed for reproducibility)
