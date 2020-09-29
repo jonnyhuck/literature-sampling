@@ -2,10 +2,10 @@ from pandas import read_excel, concat
 
 # setup the input data. extra forces additional samples if required (e.g. fulltext is not available)
 datasets = [
-    {'filename':'./data/Mental Mapping Numbered.xlsx',  'n': 85,    'extra': 0},
-    {'filename':'./data/PGIS Numbered.xlsx',            'n': 243,   'extra': 2},
-    {'filename':'./data/Sketch Mapping Numbered.xlsx',  'n': 33,    'extra': 0},
-    {'filename':'./data/Unclassified Numbered.xlsx',    'n': 179,   'extra': 2},
+    {'filename':'./data/Mental Mapping Numbered.xlsx',  'n': 85,    'extra': 4},
+    {'filename':'./data/PGIS Numbered.xlsx',            'n': 243,   'extra': 12},
+    {'filename':'./data/Sketch Mapping Numbered.xlsx',  'n': 33,    'extra': 1},
+    {'filename':'./data/Unclassified Numbered.xlsx',    'n': 179,   'extra': 13},
     ]
 
 # loop through each dataset
