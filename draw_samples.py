@@ -10,6 +10,7 @@ datasets = [
 
 # loop through each dataset
 samples = []
+sample_count = 0
 for d in datasets:
 
     # open data files
@@ -18,10 +19,13 @@ for d in datasets:
     # calculate sample size (20% + extras)
     sample_size = int(round(d['n'] * 0.2)) + d['extra']
 
+    # add new samples to running total
+    sample_count += sample_size
+
     # extract random sample (set seed for reproducibility)
     samples.append(df.sample(n=sample_size, random_state=1824))
 
 # concatenate the results into a single dataframe and write to file
 concat(samples).to_csv("./sample.csv")
 
-print("done!")
+print(sample_count, "samples, done!")
